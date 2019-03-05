@@ -488,6 +488,7 @@ p + p { color:#f00; }
 10|E[att=val]|匹配所有att属性等于"val"的E元素
 11|E[att~=val]|匹配所有att属性具有多个空格分隔的值、其中一个值等于"val"的E元素
 12|E[att\|=val]|匹配所有att属性具有多个连字号分隔（hyphen-separated）的值、其中一个值以"val"开头的E元素，主要用于lang属性，比如"en"、"en-us"、"en-gb"等等
+
 **实例：**
 ```css
 p[title] { color:#f00; }
@@ -547,6 +548,7 @@ a:link:after { content: " (" attr(href) ") "; }
 序号|选择器|含义
 -|:-:|-
 24|E ~ F|匹配任何在E元素之后的同级F元素
+
 **实例：**
 ```css
 p ~ ul { background:#ff0; }
@@ -558,6 +560,7 @@ p ~ ul { background:#ff0; }
 25|E[att^="val"]|属性att的值以"val"开头的元素
 26|E[att$="val"]|属性att的值以"val"结尾的元素
 27|E[att*="val"]|属性att的值包含"val"字符串的元素
+
 **实例：**
 ```css
 div[id^="nav"] { background:#ff0; }
@@ -570,6 +573,7 @@ div[id^="nav"] { background:#ff0; }
 29|E:disabled|匹配表单中禁用的元素
 30|E:checked|匹配表单中被选中的radio（单选框）或checkbox（复选框）元素
 31|E::selection|匹配用户当前选中的元素
+
 **实例：**
 ```css
 input[type="text"]:disabled { background:#ddd; }
@@ -618,6 +622,7 @@ p:empty { background:#ff0; }
 序号 |选择器|含义
 -|:-:|-
 43|E:not(s)|匹配不符合当前选择器的任何元素
+
 **实例：**
 ```css
 :not(p) { border:1px solid #ccc; }
