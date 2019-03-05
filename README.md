@@ -1,8 +1,30 @@
 # Front-End-interview-questions
 分享请标记出处: [https://github.com/petitspois/Front-End-interview-questions](https://github.com/petitspois/Front-End-interview-questions)
 
+- [HTML部分](#HTML)
+  - [DOCTYPE相关](#DOCTYPE相关)
+  - [web语义化](#web语义化)
+  - [前端SEO](#前端SEO)
+  - [前端性能优化有哪些？](#前端性能优化有哪些\?)
+  - [web开发中会话跟踪的方法有哪些](#web开发中会话跟踪的方法有哪些)
+  - [什么是HTML](#什么是HTML)
+  - [XHTML和HTML有什么区别](#XHTML和HTML有什么区别)
+  - [浏览器页面有哪三层构成，分别是什么，作用是什么?](#浏览器页面有哪三层构成，分别是什么，作用是什么?)
+  - [页面导入样式时，使用link和@import有什么区别](#页面导入样式时，使用link和@import有什么区别)
+  - [网页制作会用到的图片格式有哪些](#网页制作会用到的图片格式有哪些)
+  - [文本标记](#文本标记)
+  - [行内元素、块级元素、空(void)元素，有那些？](#行内元素、块级元素、空(void)元素，有那些？)
+  - [iframe有那些缺点](#iframe有那些缺点)
+  - [Label的作用是什么？](#Label的作用是什么？) 
+  - [隐藏元素的几种方法](#隐藏元素的几种方法)
+  - [简述一下src与href的区别](#简述一下src与href的区别)
+  - [清除浮动的方法有哪些？](#清除浮动的方法有哪些？)
+  - [HTTP方法](#HTTP方法)
+  - [HTTP报文结构](#HTTP报文结构)
+  - [HTML全局属性(global-attribute)有哪些](#HTML全局属性global-attribute有哪些)
+  - [何为渐进增强`、`优雅降级？](#何为渐进增强`、`优雅降级？)
+  - [`<img>`的title和alt有什么区别](#`<img>`的title和alt有什么区别)
 
-<!-- TOC -->autoauto- [Front-End-interview-questions](#front-end-interview-questions)auto    - [HTML](#html)auto        - [DOCTYPE相关](#doctype相关)auto        - [web语义化](#web语义化)auto        - [前端SEO](#前端seo)auto        - [什么是HTML](#什么是html)auto        - [XHTML和HTML有什么区别](#xhtml和html有什么区别)auto        - [浏览器页面有哪三层构成，分别是什么，作用是什么?](#浏览器页面有哪三层构成分别是什么作用是什么)auto        - [行内元素、块级元素、空(void)元素，有那些？](#行内元素块级元素空void元素有那些)auto        - [iframe有那些缺点](#iframe有那些缺点)auto        - [Label的作用是什么？](#label的作用是什么)auto        - [隐藏元素的几种方法](#隐藏元素的几种方法)auto        - [简述一下src与href的区别](#简述一下src与href的区别)auto        - [清除浮动的方法有哪些？](#清除浮动的方法有哪些)auto        - [HTTP方法](#http方法)auto        - [HTTP报文结构](#http报文结构)auto        - [HTML全局属性global-attribute有哪些](#html全局属性global-attribute有哪些)auto        - [何为渐进增强、优雅降级？](#何为渐进增强优雅降级)auto        - [\<img>的title和alt有什么区别](#\img的title和alt有什么区别)auto        - [从浏览器地址栏输入url到显示页面的步骤(以HTTP为例)](#从浏览器地址栏输入url到显示页面的步骤以http为例)auto        - [HTML5新增元素、标签？](#html5新增元素标签)auto            - [form相关](#form相关)auto            - [增强的页面元素](#增强的页面元素)autoauto<!-- /TOC -->
 
 
 ## HTML
