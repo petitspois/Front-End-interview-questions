@@ -22,8 +22,8 @@
   - [HTTP方法](#HTTP方法)
   - [HTTP报文结构](#HTTP报文结构)
   - [HTML全局属性(global-attribute)有哪些](#HTML全局属性global-attribute有哪些)
-  - [何为渐进增强、优雅降级？](#何为渐进增强、优雅降级？)
-  - [<img>的title和alt有什么区别](#<img>的title和alt有什么区别)
+  - [何为渐进增强`、`优雅降级？](#何为渐进增强`、`优雅降级？)
+  - [`<img>`的title和alt有什么区别](#`<img>`的title和alt有什么区别)
 
 
 
