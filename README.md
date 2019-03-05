@@ -46,6 +46,27 @@
             - [1.2.1.11. CSS 3中的 :target 伪类](#12111-css-3中的-target-伪类)
         - [1.2.2. display: none;与visibility: hidden;的区别](#122-display-none与visibility-hidden的区别)
         - [1.2.3. css sprite是什么,有什么优缺点](#123-css-sprite是什么有什么优缺点)
+        - [1.2.4. CSS盒模型有那几种？](#124-css盒模型有那几种)
+        - [1.2.5. CSS有哪些继承属性](#125-css有哪些继承属性)
+        - [1.2.6. png、jpg、gif 这些图片格式解释一下，分别什么时候用。有没有了解过webp？](#126-pngjpggif-这些图片格式解释一下分别什么时候用有没有了解过webp)
+        - [1.2.7. float、position 和 display 之间的关系](#127-floatposition-和-display-之间的关系)
+        - [1.2.8. 超链接访问过后hover样式就不出现的问题？](#128-超链接访问过后hover样式就不出现的问题)
+        - [1.2.9. box-sizing属性？](#129-box-sizing属性)
+        - [1.2.10. CSS优先级算法如何计算？](#1210-css优先级算法如何计算)
+        - [1.2.11. CSS3有哪些新特性？](#1211-css3有哪些新特性)
+        - [1.2.12. 请解释一下CSS3的flexbox（弹性盒布局模型）,以及适用场景？](#1212-请解释一下css3的flexbox弹性盒布局模型以及适用场景)
+        - [1.2.13. 为什么要初始化CSS样式](#1213-为什么要初始化css样式)
+        - [1.2.14. 对BFC规范(块级格式化上下文：block formatting context)的理解？](#1214-对bfc规范块级格式化上下文block-formatting-context的理解)
+        - [1.2.15. 为什么会出现浮动和什么时候需要清除浮动？清除浮动的方式？](#1215-为什么会出现浮动和什么时候需要清除浮动清除浮动的方式)
+        - [1.2.16. 上下margin重合的问题](#1216-上下margin重合的问题)
+        - [1.2.17. 移动端的布局用过媒体查询吗？](#1217-移动端的布局用过媒体查询吗)
+        - [1.2.18. CSS优化、提高性能的方法有哪些？](#1218-css优化提高性能的方法有哪些)
+        - [1.2.19. 浏览器是怎样解析CSS选择器的？](#1219-浏览器是怎样解析css选择器的)
+        - [1.2.20. 在网页中的应该使用奇数还是偶数的字体？为什么呢？](#1220-在网页中的应该使用奇数还是偶数的字体为什么呢)
+        - [1.2.21. margin和padding分别适合什么场景使用？](#1221-margin和padding分别适合什么场景使用)
+        - [1.2.22. 元素竖向的百分比设定是相对于容器的高度吗？](#1222-元素竖向的百分比设定是相对于容器的高度吗)
+        - [1.2.23. 如果需要手动写动画，你认为最小时间间隔是多久，为什么？](#1223-如果需要手动写动画你认为最小时间间隔是多久为什么)
+        - [1.2.24. style标签写在body后与body前有什么区别？](#1224-style标签写在body后与body前有什么区别)
 
 <!-- /TOC -->
 
@@ -671,6 +692,175 @@ p:empty { background:#ff0; }
     1. 图片合并麻烦
     2. 维护麻烦，修改一个图片可能需要从新布局整个图片，样式
 
+### 1.2.4. CSS盒模型有那几种？
 
+ - 一个盒子中主要的属性就5个：width、height、padding、border、margin。如下：
+    - width和height：内容的宽度、高度（不是盒子的宽度、高度）。
+    - padding：内边距。
+    - border：边框。
+    - margin：外边距。
+- 标准盒模型
+![标准盒模型](images/box-model.jpg)
+- IE盒模型
+![标准盒模型](images/box-model-ie.jpg)
 
+### 1.2.5. CSS有哪些继承属性
 
+- 关于文字排版的属性如
+    - [font](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font)
+    - [word-break](https://developer.mozilla.org/zh-CN/docs/Web/CSS/word-break)
+    - [letter-spacing](https://developer.mozilla.org/zh-CN/docs/Web/CSS/letter-spacing)
+    - [text-align](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-align)
+    - [text-rendering](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-rendering)
+    - [word-spacing](https://developer.mozilla.org/zh-CN/docs/Web/CSS/word-spacing)
+    - [white-space](https://developer.mozilla.org/zh-CN/docs/Web/CSS/white-space)
+    - [text-indent](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-indent)
+    - [text-transform](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-transform)
+    - [text-shadow](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-shadow)
+- line-height
+- color
+- visibility
+- cursor
+
+### 1.2.6. png、jpg、gif 这些图片格式解释一下，分别什么时候用。有没有了解过webp？
+
+- png是便携式网络图片（Portable Network Graphics）是一种无损数据压缩位图文件格式.优点是：压缩比高，色彩好。 大多数地方都可以用
+- jpg是一种针对相片使用的一种失真压缩方法，是一种破坏性的压缩，在色调及颜色平滑变化做的不错。在www上，被用来储存和传输照片的格式。
+- gif是一种位图文件格式，以8位色重现真色彩的图像。可以实现动画效果.
+- webp格式是谷歌在2010年推出的图片格式，压缩率只有jpg的2/3，大小比png小了45%。缺点是压缩的时间更久了，兼容性不好，目前谷歌和opera支持。
+
+### 1.2.7. float、position 和 display 之间的关系
+1. 如果display的值为none，那么后两者就不会产生作用，也不会有任何的盒子产生；
+2. 除此之外，如果元素为absolute或者fixed定位，那么float的属性值相当于‘none’，display的属性如下面的表格所示。 
+盒的位置根据“top”，“right”，“bottom”和“left”属性与盒的包含块决定。
+3. 除此之外，如果float属性的值为不是none，那么元素将会浮动，元素的display属性将如下表所示；
+4. 除此之外，如果元素是根元素，那么元素的属性如下表所示；
+5. 除此之外，元素的display属性则根据设定来取值。
+![postion](images/float-postion-display.png)
+
+指定值|计算值
+-|:-:|-
+Inline-table|Table
+inline,table-row-group,table-column, table-column-group,table-header-group,table-footer-group,table-row,table-cell,table-caption,inline-block|block
+other|Same as specified
+
+### 1.2.8. 超链接访问过后hover样式就不出现的问题？
+-  被点击访问过的超链接样式不再具有hover和active了.
+- 解决方式是改变CSS属性的排列顺序：L-V-H-A（linked, visited, hover, active）。
+
+### 1.2.9. box-sizing属性？
+ - 用来控制元素的盒子模型的解析模式，默认为content-box
+ - context-box：W3C的标准盒子模型，设置元素的 height/width 属性指的是content部分的高/宽
+ - border-box：IE传统盒子模型。设置元素的height/width属性指的是border + padding + content部分的高/宽
+
+### 1.2.10. CSS优先级算法如何计算？
+- 元素选择符： 1 (如p）或伪元素选择符(如 :firstchild)等，
+- class选择符： 10
+- id选择符：100
+- 元素标签：1000（Style属性）
+> 然后，将这四个数字分别累加，就得到每个CSS定义的优先级的值， 
+然后从左到右逐位比较大小，数字大的CSS样式的优先级就高。
+
+**注意：**
+1. !important声明的样式优先级最高，如果冲突再进行计算。 
+2. 如果优先级相同，则选择最后出现的样式。
+3. 继承得到的样式的优先级最低。
+
+### 1.2.11. CSS3有哪些新特性？
+
+1. RGBA和透明度
+2. background-image,background-origin(content-box/padding-box/border-box),background-size ,background-repeat
+3. word-wrap（对长的不可分割单词换行）word-wrap：break-word
+4. 文字阴影：text-shadow： 5px 5px 5px #FF0000;（水平阴影，垂直阴影，模糊距离，阴影颜色）
+5. font-face属性：定义自己的字体
+6. 圆角（边框半径）：border-radius 属性用于创建圆角
+7. 边框图片：border-image: url(border.png) 30 30 round
+8. 盒阴影：box-shadow: 10px 10px 5px #888888
+9. 媒体查询：定义两套css，当浏览器的尺寸变化时会采用不同的属性
+
+### 1.2.12. 请解释一下CSS3的flexbox（弹性盒布局模型）,以及适用场景？
+ - 该布局模型的目的是提供一种更加高效的方式来对容器中的条目进行布局、对齐和分配空间。在传统的布局方式中，block 布局是把块在垂直方向从上到下依次排列的；
+ - 而 inline 布局则是在水平方向来排列。弹性盒布局并没有这样内在的方向限制，可以由开发人员自由操作。
+ - 试用场景：弹性布局适合于移动前端开发，在Android和ios上也完美支持。
+
+### 1.2.13. 为什么要初始化CSS样式
+ - 因为浏览器的兼容问题，不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面显示差异
+
+### 1.2.14. 对BFC规范(块级格式化上下文：block formatting context)的理解？
+ > BFC规定了内部的Block Box如何布局。
+
+ - 定位方案：
+    1. 内部的Box会在垂直方向上一个接一个放置。
+    2. Box垂直方向的距离由margin决定，属于同一个BFC的两个相邻Box的margin会发生重叠。
+    3. 每个元素的margin box 的左边，与包含块border box的左边相接触。
+    4. BFC的区域不会与float box重叠。
+    5. BFC是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。
+    6. 计算BFC的高度时，浮动元素也会参与计算。
+- 满足下列条件之一就可触发BFC:
+    1. 根元素，即html
+    2. float的值不为none（默认）
+    3. overflow的值不为visible（默认）
+    4. display的值为inline-block、table-cell、table-caption
+    5. position的值为absolute或fixed
+
+### 1.2.15. 为什么会出现浮动和什么时候需要清除浮动？清除浮动的方式？
+> 浮动元素碰到包含它的边框或者浮动元素的边框停留。由于浮动元素不在文档流中，所以文档流的块框表现得就像浮动框不存在一样。
+
+- 浮动带来的问题：
+    1. 父元素的高度无法被撑开，影响与父元素同级的元素
+    2. 与浮动元素同级的非浮动元素（内联元素）会跟随其后
+    3. 若非第一个元素浮动，则该元素之前的元素也需要浮动，否则会影响页面显示的结构。
+
+- 清除浮动的方式：
+    1. 父级div定义height
+    2. 最后一个浮动元素后加空div标签 并添加样式clear:both。
+    3. 包含浮动元素的父标签添加样式overflow为hidden或auto。
+    4. 父级div定义zoom
+
+### 1.2.16. 上下margin重合的问题
+- 在重合元素外包裹一层容器，并触发该容器生成一个BFC。
+
+### 1.2.17. 移动端的布局用过媒体查询吗？
+> 通过媒体查询可以为不同大小和尺寸的媒体定义不同的css，适应相应的设备的显示。
+
+### 1.2.18. CSS优化、提高性能的方法有哪些？
+1. 避免过度约束
+2. 避免后代选择符
+3. 避免链式选择符
+4. 使用紧凑的语法
+5. 避免不必要的命名空间
+6. 避免不必要的重复
+7. 最好使用表示语义的名字。一个好的类名应该是描述他是什么而不是像什么
+8. 避免！important，可以选择其他选择器
+9. 尽可能的精简规则，你可以合并不同类里的重复规则
+
+### 1.2.19. 浏览器是怎样解析CSS选择器的？
+- CSS选择器的解析是从右向左解析的。若从左向右的匹配，发现不符合规则，需要进行回溯，会损失很多性能。
+- 若从右向左匹配，先找到所有的最右节点，对于每一个节点，向上寻找其父节点直到找到根元素或满足条件的匹配规则，则结束这个分支的遍历。
+- 两种匹配规则的性能差别很大，是因为从右向左的匹配在第一步就筛选掉了大量的不符合条件的最右节点（叶子节点），而从左向右的匹配规则的性能都浪费在了失败的查找上面。
+- 而在 CSS 解析完毕后，需要将解析的结果与 DOM Tree 的内容一起进行分析建立一棵 Render Tree，最终用来进行绘图。
+- 在建立 Render Tree 时（WebKit 中的「Attachment」过程），浏览器就要为每个 DOM Tree 中的元素根据 CSS 的解析结果（Style Rules）来确定生成怎样的 Render Tree。
+
+### 1.2.20. 在网页中的应该使用奇数还是偶数的字体？为什么呢？
+- 使用偶数字体。偶数字号相对更容易和 web 设计的其他部分构成比例关系。Windows 自带的点阵宋体（中易宋体）从 Vista 开始只提供 12、14、16 px 这三个大小的点阵，而 13、15、17 px时用的是小一号的点。（即每个字占的空间大了 1 px，但点阵没变），于是略显稀疏。
+
+### 1.2.21. margin和padding分别适合什么场景使用？
+- 何时使用margin：
+    1. 需要在border外侧添加空白
+    2. 空白处不需要背景色
+    3. 上下相连的两个盒子之间的空白，需要相互抵消时。
+- 何时使用padding：
+    1. 需要在border内侧添加空白
+    2. 空白处需要背景颜色
+    3. 上下相连的两个盒子的空白，希望为两者之和。
+>兼容性的问题：在IE5 IE6中，为float的盒子指定margin时，左侧的margin可能会变成两倍的宽度。通过改变padding或者指定盒子的display：inline解决。
+
+### 1.2.22. 元素竖向的百分比设定是相对于容器的高度吗？
+- 当按百分比设定一个元素的宽度时，它是相对于父容器的宽度计算的，但是，对于一些表示竖向距离的属性，例如 padding-top , padding-bottom , margin-top , margin-bottom 等，当按百分比设定它们时，依据的也是父容器的宽度，而不是高度。
+
+### 1.2.23. 如果需要手动写动画，你认为最小时间间隔是多久，为什么？
+- 多数显示器默认频率是60Hz，即1秒刷新60次，所以理论上最小间隔为1/60＊1000ms ＝ 16.7ms。
+
+### 1.2.24. style标签写在body后与body前有什么区别？
+- 页面加载自上而下 当然是先加载样式。
+- 写在body标签后由于浏览器以逐行方式对HTML文档进行解析，当解析到写在尾部的样式表（外联或写在style标签）会导致浏览器停止之前的渲染，等待加载且解析样式表完成之后重新渲染，在windows的IE下可能会出现FOUC现象（即样式失效导致的页面闪烁问题）
