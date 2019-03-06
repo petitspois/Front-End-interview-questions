@@ -67,6 +67,68 @@
         - [1.2.22. 元素竖向的百分比设定是相对于容器的高度吗？](#1222-元素竖向的百分比设定是相对于容器的高度吗)
         - [1.2.23. 如果需要手动写动画，你认为最小时间间隔是多久，为什么？](#1223-如果需要手动写动画你认为最小时间间隔是多久为什么)
         - [1.2.24. style标签写在body后与body前有什么区别？](#1224-style标签写在body后与body前有什么区别)
+        - [1.2.25. 如何垂直居中一个元素](#1225-如何垂直居中一个元素)
+            - [1.2.25.1. 文字的垂直居中](#12251-文字的垂直居中)
+            - [1.2.25.2. 容器的垂直居中](#12252-容器的垂直居中)
+    - [1.3. Js概念部分](#13-js概念部分)
+        - [1.3.1. javascript有哪几种数据类型](#131-javascript有哪几种数据类型)
+        - [1.3.2. 什么是闭包](#132-什么是闭包)
+            - [1.3.2.1. 闭包的概念](#1321-闭包的概念)
+            - [1.3.2.2. 闭包的用途](#1322-闭包的用途)
+            - [1.3.2.3. 闭包的注意点](#1323-闭包的注意点)
+            - [1.3.2.4. XMLHttpRequest通用属性和方法](#1324-xmlhttprequest通用属性和方法)
+        - [1.3.3. Fetch相比Ajax有什么优势？](#133-fetch相比ajax有什么优势)
+        - [1.3.4. sessionStorage,localStorage,cookie区别](#134-sessionstoragelocalstoragecookie区别)
+        - [1.3.5. javascript跨域通信](#135-javascript跨域通信)
+            - [1.3.5.1. 同源：两个文档同源需满足](#1351-同源两个文档同源需满足)
+            - [1.3.5.2. 跨域通信：js进行DOM操作、通信时如果目标与当前窗口不满足同源条件，浏览器为了安全会阻止跨域操作。跨域通信通常有以下方法](#1352-跨域通信js进行dom操作通信时如果目标与当前窗口不满足同源条件浏览器为了安全会阻止跨域操作跨域通信通常有以下方法)
+        - [1.3.6. javascript有哪几种方法定义函数](#136-javascript有哪几种方法定义函数)
+        - [1.3.7. javascript有哪些方法定义对象](#137-javascript有哪些方法定义对象)
+        - [1.3.8. JavaScript 中 undefined 和 not defined 的区别](#138-javascript-中-undefined-和-not-defined-的区别)
+        - [1.3.9. 怎么判断一个object是否是数组(array)？](#139-怎么判断一个object是否是数组array)
+        - [1.3.10. 栈和堆的区别？](#1310-栈和堆的区别)
+        - [1.3.11. 谈谈this的理解](#1311-谈谈this的理解)
+        - [1.3.12. eval是做什么的？](#1312-eval是做什么的)
+        - [1.3.13. 什么是window对象? 什么是document对象?](#1313-什么是window对象-什么是document对象)
+        - [1.3.14. null，undefined的区别？](#1314-nullundefined的区别)
+        - [1.3.15. javascript 代码中的"use strict";是什么意思 ? 使用它区别是什么？](#1315-javascript-代码中的use-strict是什么意思--使用它区别是什么)
+        - [1.3.16. 如何判断一个对象是否属于某个类？](#1316-如何判断一个对象是否属于某个类)
+        - [1.3.17. new操作符具体干了什么呢?](#1317-new操作符具体干了什么呢)
+        - [1.3.18. Javascript中，执行时对象查找时，永远不会去查找原型的函数？](#1318-javascript中执行时对象查找时永远不会去查找原型的函数)
+        - [1.3.19. JS延迟加载的方式有哪些？](#1319-js延迟加载的方式有哪些)
+        - [1.3.20. AMD（Modules/Asynchronous-Definition）、CMD（Common Module Definition）规范区别？](#1320-amdmodulesasynchronous-definitioncmdcommon-module-definition规范区别)
+        - [1.3.21. call和apply](#1321-call和apply)
+        - [1.3.22. documen.write和 innerHTML的区别](#1322-documenwrite和-innerhtml的区别)
+        - [1.3.23. 回流与重绘](#1323-回流与重绘)
+        - [1.3.24. 数组对象有哪些原生方法，列举一下](#1324-数组对象有哪些原生方法列举一下)
+        - [1.3.25. 那些操作会造成内存泄漏](#1325-那些操作会造成内存泄漏)
+        - [1.3.26. flash和js通过什么类如何交互?](#1326-flash和js通过什么类如何交互)
+        - [1.3.27. 有效的javascript变量定义规则](#1327-有效的javascript变量定义规则)
+        - [1.3.28. XML与JSON的区别？](#1328-xml与json的区别)
+        - [1.3.29. Web Worker和Web Socket？](#1329-web-worker和web-socket)
+        - [1.3.30. JS垃圾回收机制？](#1330-js垃圾回收机制)
+        - [1.3.31. web应用从服务器主动推送data到客户端的方式？](#1331-web应用从服务器主动推送data到客户端的方式)
+        - [1.3.32. attribute与property的区别？](#1332-attribute与property的区别)
+    - [1.4. javascript编程部分](#14-javascript编程部分)
+        - [1.4.1. 如何判断一个对象是否为函数](#141-如何判断一个对象是否为函数)
+        - [1.4.2. 下面的代码输出什么？](#142-下面的代码输出什么)
+        - [1.4.3. 写一个mul函数，使用方法如下。](#143-写一个mul函数使用方法如下)
+        - [1.4.4. JavaScript怎么清空数组？](#144-javascript怎么清空数组)
+        - [1.4.5. 下面代码输出什么(delete)？](#145-下面代码输出什么delete)
+        - [1.4.6. 实现对数组进行乱序](#146-实现对数组进行乱序)
+        - [1.4.7. 实现一个函数 clone()，可以对 JavaScript 中的5种主要的数据类型（包括 Number、String、Object、Array、Boolean）进行值复制。](#147-实现一个函数-clone可以对-javascript-中的5种主要的数据类型包括-numberstringobjectarrayboolean进行值复制)
+        - [1.4.8. [] ? !![] : ![];输出结果是什么？](#148-----输出结果是什么)
+        - [1.4.9. 下面代码输出什么？](#149-下面代码输出什么)
+        - [1.4.10. 下面的代码会在 console 输出神马？为什么？](#1410-下面的代码会在-console-输出神马为什么)
+        - [1.4.11. 下面的代码会在 console 输出神马？为什么？](#1411-下面的代码会在-console-输出神马为什么)
+        - [1.4.12. 解释一下下面代码的输出](#1412-解释一下下面代码的输出)
+        - [1.4.13. 实现函数 isInteger(x) 来判断 x 是否是整数](#1413-实现函数-isintegerx-来判断-x-是否是整数)
+        - [1.4.14. 在下面的代码中，数字 1-4 会以什么顺序输出？为什么会这样输出？](#1414-在下面的代码中数字-1-4-会以什么顺序输出为什么会这样输出)
+        - [1.4.15. 写一个按照下面方式调用都能正常工作的 sum 方法](#1415-写一个按照下面方式调用都能正常工作的-sum-方法)
+        - [1.4.16. 解释下面代码的输出](#1416-解释下面代码的输出)
+        - [1.4.17. 给你一个 DOM 元素，创建一个能访问该元素所有子元素的函数，并且要将每个子元素传递给指定的回调函数。](#1417-给你一个-dom-元素创建一个能访问该元素所有子元素的函数并且要将每个子元素传递给指定的回调函数)
+        - [1.4.18. Js数组去重方法](#1418-js数组去重方法)
+        - [1.4.19. 二维数组的冒泡排序](#1419-二维数组的冒泡排序)
 
 <!-- /TOC -->
 
@@ -864,3 +926,577 @@ other|Same as specified
 ### 1.2.24. style标签写在body后与body前有什么区别？
 - 页面加载自上而下 当然是先加载样式。
 - 写在body标签后由于浏览器以逐行方式对HTML文档进行解析，当解析到写在尾部的样式表（外联或写在style标签）会导致浏览器停止之前的渲染，等待加载且解析样式表完成之后重新渲染，在windows的IE下可能会出现FOUC现象（即样式失效导致的页面闪烁问题）
+
+### 1.2.25. 如何垂直居中一个元素
+#### 1.2.25.1. 文字的垂直居中
+- 单行文字的垂直居中，只要将行高与容器高设为相等即可。
+- 比如，容器中有一行数字。
+```html
+<div id="container">1234567890</div>
+```
+- 然后CSS这样写：
+```css
+div#container {height: 35px; line-height: 35px;}
+```
+
+>如果有n行文字，那么将行高设为容器高度的n分之一即可。
+
+#### 1.2.25.2. 容器的垂直居中
+
+- 比如，有一大一小两个容器，请问如何将小容器垂直居中？
+
+```html
+<div id="big">
+　　　　<div id="small">
+　　　　</div>
+</div>
+```
+- 首先，将大容器的定位为relative。
+
+```css
+    div#big{
+　　　　position:relative;
+　　　　height:480px;
+　　}
+```
+- 然后，将小容器定位为absolute，再将它的左上角沿y轴下移50%，最后将它margin-top上移本身高度的50%即可。
+
+```css
+    div#small {
+　　　　position: absolute;
+　　　　top: 50%;
+　　　　height: 240px;
+　　　　margin-top: -120px;
+　　}
+```
+> 使用同样的思路，也可以做出水平居中的效果。
+
+## 1.3. Js概念部分
+
+### 1.3.1. javascript有哪几种数据类型
+- 六种基本数据类型
+    1. undefined
+    2. null
+    3. string
+    4. number
+    5. boolean
+    6. symbol(es6)
+- 一种引用类型
+    1. Object
+
+### 1.3.2. 什么是闭包
+#### 1.3.2.1. 闭包的概念
+- 各种专业文献上的"闭包"（closure）定义非常抽象，很难看懂。我的理解是，闭包就是能够读取其他函数内部变量的函数。
+- 由于在Javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包简单理解成"定义在一个函数内部的函数"。
+- 所以，在本质上，闭包就是将函数内部和函数外部连接起来的一座桥梁。
+
+#### 1.3.2.2. 闭包的用途
+
+- 一个是前面提到的可以读取函数内部的变量
+- 另一个就是让这些变量的值始终保持在内存中。
+
+#### 1.3.2.3. 闭包的注意点
+
+- 由于闭包会使得函数中的变量都被保存在内存中，内存消耗很大，所以不能滥用闭包，否则会造成网页的性能问题，在IE中可能导致内存泄露。解决方法是，在退出函数之前，将不使用的局部变量全部删除。
+
+- 闭包会在父函数外部，改变父函数内部变量的值。所以，如果你把父函数当作对象（object）使用，把闭包当作它的公用方法（Public Method），把内部变量当作它的私有属性（private value），这时一定要小心，不要随便改变父函数内部变量的值。
+
+#### 1.3.2.4. XMLHttpRequest通用属性和方法
+1. `readyState`: 表示请求状态的整数，取值：
+    - UNSENT(0) : 对象已创建
+    - OPENED（1）: open()成功调用，在这个状态下，可以为xhr设置请求头，或者使用send()发送请求
+    - HEADERS_RECEIVED(2)：所有重定向已经自动完成访问，并且最终响应的HTTP头已经收到
+    - LOADING(3)：响应体正在接收
+    - DONE(4)：数据传输完成或者传输产生错误
+2. `onreadystatechange`：readyState改变时调用的函数
+3. `status`: 服务器返回的HTTP状态码（如，200， 404）
+4. `statusText`:服务器返回的HTTP状态信息（如，OK，No Content）
+5. `responseText`:作为字符串形式的来自服务器的完整响应
+6. `responseXML`: Document对象，表示服务器的响应解析成的XML文档
+7. `abort()`:取消异步HTTP请求
+8. `getAllResponseHeaders()`: 返回一个字符串，包含响应中服务器发送的全部HTTP报头。每个报头都是一个用冒号分隔开的名/值对，并且使用一个回车/换行来分隔报头行
+9. `getResponseHeader(headerName)`:返回headName对应的报头值
+10. `open(method, url, asynchronous [, user, password])`:初始化准备发送到服务器上的请求。method是HTTP方法，不区分大小写；url是请求发送的相对或绝对URL；asynchronous表示请求是否异步；user和password提供身份验证
+11. `setRequestHeader(name, value)`:设置HTTP报头
+12. `send(body)`:对服务器请求进行初始化。参数body包含请求的主体部分，对于POST请求为键值对字符串；对于GET请求，为null
+
+### 1.3.3. Fetch相比Ajax有什么优势？
+1. 语法简洁，更加语义化
+2. 基于标准 Promise 实现，支持 async/await
+3. 同构方便，使用 [isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch)
+4. 更加底层，提供的API丰富（request, response）
+5. 脱离了XHR，是ES规范里新的实现方式
+> fetch的各种问题
+- fetch只对网络请求报错，对400，500都当做成功的请求，服务器返回 400，500 错误码时并不会 reject，只有网络错误这些导致请求不能完成时，fetch 才会被 reject。
+- fetch默认不会带cookie，需要添加配置项： fetch(url, {credentials: 'include'})
+- fetch不支持abort，不支持超时控制，使用setTimeout及Promise.reject的实现的超时控制并不能阻止请求过程继续在后台运行，造成了流量的浪费
+- fetch没有办法原生监测请求的进度，而XHR可以
+
+### 1.3.4. sessionStorage,localStorage,cookie区别
+
+1. 都会在浏览器端保存，有大小限制，同源限制
+2. cookie会在请求时发送到服务器，作为会话标识，服务器可修改cookie；web storage不会发送到服务器
+3. cookie有path概念，子路径可以访问父路径cookie，父路径不能访问子路径cookie
+4. 有效期：cookie在设置的有效期内有效，默认为浏览器关闭；sessionStorage在窗口关闭前有效，localStorage长期有效，直到用户删除
+5. 共享：sessionStorage不能共享，localStorage在同源文档之间共享，cookie在同源且符合path规则的文档之间共享
+6. localStorage的修改会促发其他文档窗口的update事件
+7. cookie有secure属性要求HTTPS传输
+8. 浏览器不能保存超过300个cookie，单个服务器不能超过20个，每个cookie不能超过4k。web storage大小支持能达到5M
+
+### 1.3.5. javascript跨域通信
+
+#### 1.3.5.1. 同源：两个文档同源需满足
+
+1. 协议相同
+2. 域名相同 
+3. 端口相同
+
+#### 1.3.5.2. 跨域通信：js进行DOM操作、通信时如果目标与当前窗口不满足同源条件，浏览器为了安全会阻止跨域操作。跨域通信通常有以下方法
+1. 如果是log之类的简单单项通信，新建\<img>,\<script>,\<link>,\<iframe>元素，通过src，href属性设置为目标url。实现跨域请求
+
+2. 如果请求json数据，使用\<script>进行jsonp请求
+
+3. 现代浏览器中多窗口通信使用HTML5规范的targetWindow.postMessage(data, origin);其中data是需要发送的对象，origin是目标窗口的origin。window.addEventListener('message', handler, false);handler的event.data是postMessage发送来的数据，event.origin是发送窗口的origin，event.source是发送消息的窗口引用
+4. 跨域请求数据，现代浏览器可使用HTML5规范的CORS功能，只要目标服务器返回HTTP头部**Access-Control-Allow-Origin: ***即可像普通ajax一样访问跨域资源
+
+### 1.3.6. javascript有哪几种方法定义函数
+- 函数声明表达式
+- function操作符
+- Function 构造函数
+- ES6:arrow function
+
+### 1.3.7. javascript有哪些方法定义对象
+1. 对象字面量： `var obj = {};`
+2. 构造函数： `var obj = new Object();`
+3. Object.create(): `var obj = Object.create(Object.prototype);`
+
+### 1.3.8. JavaScript 中 undefined 和 not defined 的区别
+>JavaScript 未声明变量直接使用会抛出异常：var name is not defined，如果没有处理异常，代码就停止运行了。
+但是，使用typeof undeclared_variable并不会产生异常，会直接返回 undefined。
+```js
+var x; // 声明 x
+console.log(x); //output: undefined 
+```
+
+```js
+console.log(typeof y); //output: undefined
+```
+
+```js
+console.log(z); // 抛出异常: ReferenceError: z is not defined
+```
+
+### 1.3.9. 怎么判断一个object是否是数组(array)？
+1. 使用 Object.prototype.toString 来判断是否是数组
+```js
+function isArray(obj){
+    return Object.prototype.toString.call( obj ) === '[object Array]';
+}
+```
+2. 使用 原型链 来完成判断
+```js
+function isArray(obj){
+    return obj.__proto__ === Array.prototype;
+}
+```
+> 基本思想是利用 实例如果是某个构造函数构造出来的那么 它的 __proto__是指向构造函数的 prototype属性
+
+### 1.3.10. 栈和堆的区别？
+ - 栈（stack）：由编译器自动分配释放，存放函数的参数值，局部变量等；
+- 堆（heap）：一般由程序员分配释放，若程序员不释放，程序结束时可能由操作系统释放。
+
+### 1.3.11. 谈谈this的理解
+1. this总是指向函数的直接调用者（而非间接调用者）
+2. 如果有new关键字，this指向new出来的那个对象
+3. 在事件中，this指向目标元素，特殊的是IE的attachEvent中的this总是指向全局对象window。
+
+### 1.3.12. eval是做什么的？
+- 它的功能是把对应的字符串解析成JS代码并运行；应该避免使用eval，不安全，非常耗性能（2次，一次解析成js语句，一次执行）。
+
+### 1.3.13. 什么是window对象? 什么是document对象?
+- window对象代表浏览器中打开的一个窗口。document对象代表整个html文档。实际上，document对象是window对象的一个属性。
+
+### 1.3.14. null，undefined的区别？
+- null表示一个对象被定义了，但存放了空指针，转换为数值时为0。
+- undefined表示声明的变量未初始化，转换为数值时为NAN。
+```js
+typeof(null) -- object;
+typeof(undefined) -- undefined
+```
+
+### 1.3.15. javascript 代码中的"use strict";是什么意思 ? 使用它区别是什么？
+> 除了正常模式运行外，ECMAscript添加了第二种运行模式：“严格模式”。
+1. 消除js不合理，不严谨地方，减少怪异行为
+2. 消除代码运行的不安全之处，
+3. 提高编译器的效率，增加运行速度
+4. 为未来的js新版本做铺垫。
+
+### 1.3.16. 如何判断一个对象是否属于某个类？
+- 使用instanceof 即if(a instanceof Person){alert('yes');}
+
+### 1.3.17. new操作符具体干了什么呢?
+1. 创建一个空对象，并且 this 变量引用该对象，同时还继承了该函数的原型。
+2. 属性和方法被加入到 this 引用的对象中。
+3. 新创建的对象由 this 所引用，并且最后隐式的返回 this 。
+
+### 1.3.18. Javascript中，执行时对象查找时，永远不会去查找原型的函数？
+- Object.hasOwnProperty(proName)：是用来判断一个对象是否有你给出名称的属性。不过需要注意的是，此方法无法检查该对象的原型链中是否具有该属性，该属性必须是对象本身的一个成员。
+
+### 1.3.19. JS延迟加载的方式有哪些？
+> JS的延迟加载有助与提高页面的加载速度。
+- defer和async、动态创建DOM方式（用得最多）、按需异步载入JS
+- defer：延迟脚本。立即下载，但延迟执行（延迟到整个页面都解析完毕后再运行），按照脚本出现的先后顺序执行。
+- async：异步脚本。下载完立即执行，但不保证按照脚本出现的先后顺序执行。
+
+### 1.3.20. AMD（Modules/Asynchronous-Definition）、CMD（Common Module Definition）规范区别？
+> AMD 是 RequireJS 在推广过程中对模块定义的规范化产出。CMD 是 SeaJS 在推广过程中对模块定义的规范化产出。
+区别：
+1. 对于依赖的模块，AMD 是提前执行，CMD 是延迟执行。不过 RequireJS 从 2.0 开始，也改成可以延迟执行（根据写法不同，处理方式不同）
+2. CMD 推崇依赖就近，AMD 推崇依赖前置。
+3. AMD 的 API 默认是一个当多个用，CMD 的 API 严格区分，推崇职责单一。
+
+### 1.3.21. call和apply
+>call（）方法和apply（）方法的作用相同，动态改变某个类的某个方法的运行环境。他们的区别在于接收参数的方式不同。在使用call（）方法时，传递给函数的参数必须逐个列举出来。使用apply（）时，传递给函数的是参数数组。
+
+### 1.3.22. documen.write和 innerHTML的区别
+- document.write()只能重绘整个页面
+- innerHTML可以重绘页面的一部分
+
+### 1.3.23. 回流与重绘
+> 当渲染树中的一部分(或全部)因为元素的规模尺寸，布局，隐藏等改变而需要重新构建。这就称为回流(reflow)。每个页面至少需要一次回流，就是在页面第一次加载的时候。在回流的时候，浏览器会使渲染树中受到影响的部分失效，并重新构造这部分渲染树。完成回流后，浏览器会重新绘制受影响的部分到屏幕中，该过程成为重绘
+
+### 1.3.24. 数组对象有哪些原生方法，列举一下
+```js
+pop、push、shift、unshift、splice、reverse、sort、concat、join、slice、toString、indexOf、lastIndexOf、reduce、reduceRight
+forEach、map、filter、every、some
+```
+
+### 1.3.25. 那些操作会造成内存泄漏
+> 全局变量、闭包、DOM清空或删除时，事件未清除、子元素存在引用
+
+### 1.3.26. flash和js通过什么类如何交互?
+
+> Flash提供了ExternalInterface接口与JavaScript通信，ExternalInterface有两个方法，call和addCallback，call的作用是让Flash调用js里的方法，addCallback是用来注册flash函数让js调用。
+
+### 1.3.27. 有效的javascript变量定义规则
+> 第一个字符必须是一个字母、下划线（_）或一个美元符号（$）；其他字符可以是字母、下划线、美元符号或数字。
+
+### 1.3.28. XML与JSON的区别？
+1. 数据体积方面。JSON相对于XML来讲，数据的体积小，传递的速度更快些。
+2. 数据交互方面。JSON与JavaScript的交互更加方便，更容易解析处理，更好的数据交互。
+3. 数据描述方面。JSON对数据的描述性比XML较差。
+4. 传输速度方面。JSON的速度要远远快于XML。
+
+### 1.3.29. Web Worker和Web Socket？
+> web socket：在一个单独的持久连接上提供全双工、双向的通信。使用自定义的协议（ws://、wss://），同源策略对web socket不适用。
+
+- web worker：运行在后台的JavaScript，不影响页面的性能。
+- 创建worker：var worker = new Worker(url);
+- 向worker发送数据：worker.postMessage(data);
+- 接收worker返回的数据：worker.onmessage
+- 终止一个worker的执行：worker.terminate();
+
+### 1.3.30. JS垃圾回收机制？
+1. 标记清除：
+    - 这个算法把“对象是否不再需要”简化定义为“对象是否可以获得”。
+这个算法假定设置一个叫做根（root）的对象（在Javascript里，根是全局对象）。定期的，垃圾回收器将从根开始，找所有从根开始引用的对象，然后找这些对象引用的对象。从根开始，垃圾回收器将找到所有可以获得的对象和所有不能获得的对象。
+2. 引用计数:
+    - 这是最简单的垃圾收集算法。此算法把“对象是否不再需要”简化定义为“对象有没有其他对象引用到它”。如果没有引用指向该对象（零引用），对象将被垃圾回收机制回收。
+该算法有个限制：无法处理循环引用。两个对象被创建，并互相引用，形成了一个循环。它们被调用之后不会离开函数作用域，所以它们已经没有用了，可以被回收了。然而，引用计数算法考虑到它们互相都有至少一次引用，所以它们不会被回收。
+
+### 1.3.31. web应用从服务器主动推送data到客户端的方式？
+>javaScript数据推送：commet（基于http长连接的服务器推送技术）。
+基于web socket的推送：SSE（server-send Event）
+
+### 1.3.32. attribute与property的区别？
+- attribute是dom元素在文档中作为html标签拥有的属性
+- property是dom元素在js中作为对象拥有的属性。
+- 所以，对于html的标准属性来说，attribute和property是同步的，是会自动更新的。但对于自定义属性，他们不同步。
+
+## 1.4. javascript编程部分
+
+### 1.4.1. 如何判断一个对象是否为函数
+```js
+Object.prototype.toString.call(arg) === '[object Function]';
+```
+### 1.4.2. 下面的代码输出什么？
+```js
+var y = 1;
+if (function f(){}) {
+    y += typeof f;
+}
+console.log(y);
+```
+**答**
+```js
+1undefined
+```
+
+### 1.4.3. 写一个mul函数，使用方法如下。
+```js
+console.log(mul(2)(3)(4)); // output : 24 
+console.log(mul(4)(3)(4)); // output : 48
+```
+
+**答**
+
+```js
+function mul (x) {
+    return function (y) { 
+        return function (z) { 
+            return x * y * z; 
+        };
+    };
+}
+```
+
+### 1.4.4. JavaScript怎么清空数组？
+```js
+var arrayList = ['a','b','c','d','e','f'];
+```
+- 怎么清空 arrayList?
+    1. `arrayList = [];`
+    2. `arrayList.length = 0;`
+    3. `arrayList.splice(0, arrayList.length);`
+
+### 1.4.5. 下面代码输出什么(delete)？
+```js
+var output = (function(x){
+    delete x;
+    return x;
+})(0);
+  
+console.log(output);
+```
+**答**
+```
+输出是 0。 delete 操作符是将object的属性删去的操作。但是这里的 x 是并不是对象的属性， delete 操作符并不能作用。
+```
+
+### 1.4.6. 实现对数组进行乱序
+```js
+var a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+a.sort(function(a, b) {
+    return Math.random() - 0.5
+});
+```
+
+### 1.4.7. 实现一个函数 clone()，可以对 JavaScript 中的5种主要的数据类型（包括 Number、String、Object、Array、Boolean）进行值复制。
+
+```js
+function clone(obj) {
+    //判断是对象，就进行循环复制
+    if (typeof obj === 'object' && typeof obj !== 'null') {
+        // 区分是数组还是对象，创建空的数组或对象
+        var o = Object.prototype.toString.call(obj).slice(8, -1) === "Array" ? [] : {};
+        for (var k in obj) {
+            // 如果属性对应的值为对象，则递归复制
+            if(typeof obj[k] === 'object' && typeof obj[k] !== 'null'){
+                o[k] = clone(obj[k])
+            }else{
+                o[k] = obj[k];
+            }
+        }
+    }else{ //不为对象，直接把值返回
+        return obj;
+    }
+    return o;
+}
+```
+
+### 1.4.8. [] ? !![] : ![];输出结果是什么？
+
+```js
+let val = [] ? !![] : ![];
+console.log(val);
+
+```
+**答**
+`true`
+
+### 1.4.9. 下面代码输出什么？
+
+```js
+let k;
+for(let i = 0,j = 0;i < 10,j < 8; i++, j++){
+  k = i + j;
+}
+```
+**答**
+```
+14。这里的i和j是同步增长，当j加到7的时候，i也等于7，k执行等于14，j再加1，不满足条件，跳出循环，结果为14，如果再问i和j的值，则都为8。
+```
+
+### 1.4.10. 下面的代码会在 console 输出神马？为什么？
+```js
+(function(){
+  var a = b = 3;
+})();
+
+console.log("a defined? " + (typeof a !== 'undefined'));   
+console.log("b defined? " + (typeof b !== 'undefined'));
+```
+**答**
+```js
+console.log(b); //3
+console,log(typeof a); //undefined
+```
+
+### 1.4.11. 下面的代码会在 console 输出神马？为什么？
+```js
+var myObject = {
+    foo: "bar",
+    func: function() {
+        var self = this;
+        console.log("outer func:  this.foo = " + this.foo);
+        console.log("outer func:  self.foo = " + self.foo);
+        (function() {
+            console.log("inner func:  this.foo = " + this.foo);
+            console.log("inner func:  self.foo = " + self.foo);
+        }());
+    }
+};
+myObject.func();
+```
+**答**
+```js
+outer func:  this.foo = bar
+outer func:  self.foo = bar
+inner func:  this.foo = undefined
+inner func:  self.foo = bar
+```
+
+### 1.4.12. 解释一下下面代码的输出
+```js
+console.log(0.1 + 0.2);   //0.30000000000000004
+console.log(0.1 + 0.2 == 0.3);  //false
+```
+- JavaScript 中的 number 类型就是浮点型，JavaScript 中的浮点数采用IEEE-754 格式的规定，这是一种二进制表示法，可以精确地表示分数，比如1/2，1/8，1/1024，每个浮点数占64位。但是，二进制浮点数表示法并不能精确的表示类似0.1这样 的简单的数字，会有舍入误差。
+- 由于采用二进制，JavaScript 也不能有限表示 1/10、1/2 等这样的分数。在二进制中，1/10(0.1)被表示为 0.00110011001100110011…… 注意 0011 是无限重复的，这是舍入误差造成的，所以对于 0.1 + 0.2 这样的运算，操作数会先被转成二进制，然后再计算：
+```js
+0.1 => 0.0001 1001 1001 1001…（无限循环）
+0.2 => 0.0011 0011 0011 0011…（无限循环）
+```
+- 双精度浮点数的小数部分最多支持 52 位，所以两者相加之后得到这么一串 0.0100110011001100110011001100110011001100...因浮点数小数位的限制而截断的二进制数字，这时候，再把它转换为十进制，就成了 0.30000000000000004。
+
+> 对于保证浮点数计算的正确性，有两种常见方式。
+
+> 一是先升幂再降幂：
+
+```js
+function add(num1, num2){
+  let r1, r2, m;
+  r1 = (''+num1).split('.')[1].length;
+  r2 = (''+num2).split('.')[1].length;
+  m = Math.pow(10, Math.max(r1,r2));
+  return (num1 * m + num2 * m) / m;
+}
+console.log(add(0.1, 0.2));   //0.3
+console.log(add(0.15,0.2256)); //0.3756
+```
+> 二是是使用内置的 toPrecision() 和 toFixed() 方法，注意，方法的返回值字符串。
+```js
+function add(x, y) {
+    return x.toPrecision() + y.toPrecision()
+}
+console.log(add(0.1,0.2));  //"0.10.2"
+```
+
+### 1.4.13. 实现函数 isInteger(x) 来判断 x 是否是整数
+
+```js
+function isInteger(x) { 
+    return parseInt(x, 10) === x; 
+}
+```
+> ES6 对数值进行了扩展，提供了静态方法 isInteger() 来判断参数是否是整数：
+
+
+### 1.4.14. 在下面的代码中，数字 1-4 会以什么顺序输出？为什么会这样输出？
+```js
+(function() {
+    console.log(1); 
+    setTimeout(function(){console.log(2)}, 1000); 
+    setTimeout(function(){console.log(3)}, 0); 
+    console.log(4);
+})();
+```
+> 1, 4, 3, 2
+
+### 1.4.15. 写一个按照下面方式调用都能正常工作的 sum 方法
+```js
+console.log(sum(2, 3));   // Outputs 5
+console.log(sum(2)(3));  // Outputs 5
+```
+
+```js
+function sum() {
+  var fir = arguments[0];
+  if(arguments.length === 2) {
+    return arguments[0] + arguments[1]
+  } else {
+    return function(sec) {
+       return fir + sec;
+    }
+  }
+}
+```
+
+### 1.4.16. 解释下面代码的输出
+```js
+var a={},
+    b={key:'b'},
+    c={key:'c'};
+
+a[b]=123;
+a[c]=456;
+
+console.log(a[b]);
+```
+输出是 456, a["[object Object]"]
+
+### 1.4.17. 给你一个 DOM 元素，创建一个能访问该元素所有子元素的函数，并且要将每个子元素传递给指定的回调函数。
+```js
+function Traverse(p_element,p_callback) {
+   p_callback(p_element);
+   var list = p_element.children;
+   for (var i = 0; i < list.length; i++) {
+       Traverse(list[i],p_callback);  // recursive call
+   }
+}
+```
+
+### 1.4.18. Js数组去重方法
+
+```js
+var arr=[2,8,5,0,5,2,6,7,2];
+function unique1(arr){
+  var hash=[];
+  for (var i = 0; i < arr.length; i++) {
+     if(hash.indexOf(arr[i])==-1){
+      hash.push(arr[i]);
+     }
+  }
+  return hash;
+}
+```
+es6
+```js
+new Set([2,8,5,0,5,2,6,7,2]);
+```
+
+### 1.4.19. 二维数组的冒泡排序
+```js
+var arr=[["北京",80],["上海",50],["福州",10],["广州",50],["成都",70],["西安",100]];
+var t;
+for(var i=0;i<arr.length;i++){
+    for(var j=0;j<arr.length-1;j++){
+        if(arr[j][1]>arr[j+1][1]){
+            t=arr[j];
+            arr[j]=arr[j+1];
+            arr[j+1]=t;
+        }
+    }
+}
+console.log(arr);
+```
