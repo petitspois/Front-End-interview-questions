@@ -173,24 +173,24 @@
         - [1.7.4. 都用过那些测试框架](#174-都用过那些测试框架)
         - [1.7.5. 常用的断言库](#175-常用的断言库)
     - [1.8. React 常见问题](#18-react-常见问题)
-        - [React 中 keys 的作用是什么？](#react-中-keys-的作用是什么)
-        - [调用 setState 之后发生了什么？](#调用-setstate-之后发生了什么)
-        - [react 生命周期函数](#react-生命周期函数)
-        - [shouldComponentUpdate 是做什么的](#shouldcomponentupdate-是做什么的)
-        - [为什么虚拟 dom 会提高性能?](#为什么虚拟-dom-会提高性能)
-        - [react diff 原理](#react-diff-原理)
-        - [React 中 refs 的作用是什么？](#react-中-refs-的作用是什么)
-        - [(组件的)状态(state)和属性(props)之间有何不同](#组件的状态state和属性props之间有何不同)
-        - [何为受控组件(controlled component)](#何为受控组件controlled-component)
-        - [为什么建议传递给 setState 的参数是一个 callback 而不是一个对象](#为什么建议传递给-setstate-的参数是一个-callback-而不是一个对象)
-        - [除了在构造函数中绑定 this，还有其它方式吗](#除了在构造函数中绑定-this还有其它方式吗)
-        - [应该在 React 组件的何处发起 Ajax 请求](#应该在-react-组件的何处发起-ajax-请求)
-        - [描述事件在 React 中的处理方式](#描述事件在-react-中的处理方式)
-        - [createElement 和 cloneElement 有什么区别？](#createelement-和-cloneelement-有什么区别)
-        - [React 中有三种构建组件的方式](#react-中有三种构建组件的方式)
-        - [React 项目用过什么脚手架](#react-项目用过什么脚手架)
-        - [怎么用 React.createElement 重写下面的代码](#怎么用-reactcreateelement-重写下面的代码)
-        - [如何告诉 React 它应该编译生产环境版本？](#如何告诉-react-它应该编译生产环境版本)
+        - [1.8.1. React 中 keys 的作用是什么？](#181-react-中-keys-的作用是什么)
+        - [1.8.2. 调用 setState 之后发生了什么？](#182-调用-setstate-之后发生了什么)
+        - [1.8.3. react 生命周期函数](#183-react-生命周期函数)
+        - [1.8.4. shouldComponentUpdate 是做什么的](#184-shouldcomponentupdate-是做什么的)
+        - [1.8.5. 为什么虚拟 dom 会提高性能?](#185-为什么虚拟-dom-会提高性能)
+        - [1.8.6. react diff 原理](#186-react-diff-原理)
+        - [1.8.7. React 中 refs 的作用是什么？](#187-react-中-refs-的作用是什么)
+        - [1.8.8. (组件的)状态(state)和属性(props)之间有何不同](#188-组件的状态state和属性props之间有何不同)
+        - [1.8.9. 何为受控组件(controlled component)](#189-何为受控组件controlled-component)
+        - [1.8.10. 为什么建议传递给 setState 的参数是一个 callback 而不是一个对象](#1810-为什么建议传递给-setstate-的参数是一个-callback-而不是一个对象)
+        - [1.8.11. 除了在构造函数中绑定 this，还有其它方式吗](#1811-除了在构造函数中绑定-this还有其它方式吗)
+        - [1.8.12. 应该在 React 组件的何处发起 Ajax 请求](#1812-应该在-react-组件的何处发起-ajax-请求)
+        - [1.8.13. 描述事件在 React 中的处理方式](#1813-描述事件在-react-中的处理方式)
+        - [1.8.14. createElement 和 cloneElement 有什么区别？](#1814-createelement-和-cloneelement-有什么区别)
+        - [1.8.15. React 中有三种构建组件的方式](#1815-react-中有三种构建组件的方式)
+        - [1.8.16. React 项目用过什么脚手架](#1816-react-项目用过什么脚手架)
+        - [1.8.17. 怎么用 React.createElement 重写下面的代码](#1817-怎么用-reactcreateelement-重写下面的代码)
+        - [1.8.18. 如何告诉 React 它应该编译生产环境版本？](#1818-如何告诉-react-它应该编译生产环境版本)
     - [1.9. 开放性问题](#19-开放性问题)
 
 <!-- /TOC -->
@@ -1934,7 +1934,7 @@ for (let i = 0; i < 10; i++) {
     
 ## 1.8. React 常见问题
 
-### React 中 keys 的作用是什么？
+### 1.8.1. React 中 keys 的作用是什么？
 > Keys 是 React 用于追踪哪些列表中元素被修改、被添加或者被移除的辅助标识。
 ```js
 render () {
@@ -1949,10 +1949,10 @@ render () {
 ```
 - 在开发过程中，我们需要保证某个元素的 key 在其同级元素中具有唯一性。在 React Diff 算法中 React 会借助元素的 Key 值来判断该元素是新近创建的还是被移动而来的元素，从而减少不必要的元素重渲染。此外，React 还需要借助 Key 值来判断元素与本地状态的关联关系，因此我们绝不可忽视转换函数中 Key 的重要性。
 
-### 调用 setState 之后发生了什么？
+### 1.8.2. 调用 setState 之后发生了什么？
 > 在代码中调用 setState 函数之后，React 会将传入的参数对象与组件当前的状态合并，然后触发所谓的调和过程（Reconciliation）。经过调和过程，React 会以相对高效的方式根据新的状态构建 React 元素树并且着手重新渲染整个 UI 界面。在 React 得到元素树之后，React 会自动计算出新的树与老树的节点差异，然后根据差异对界面进行最小化重渲染。在差异计算算法中，React 能够相对精确地知道哪些位置发生了改变以及应该如何改变，这就保证了按需更新，而不是全部重新渲染。
     
-### react 生命周期函数
+### 1.8.3. react 生命周期函数
 - 旧的
 
 ![](images/lifecycle-old.jpg)
@@ -1968,51 +1968,51 @@ render () {
 
 4. 新增了对错误的处理（componentDidCatch）
 
-### shouldComponentUpdate 是做什么的
+### 1.8.4. shouldComponentUpdate 是做什么的
 - shouldComponentUpdate 这个方法用来判断是否需要调用 render 方法重新描绘 dom。因为 dom 的描绘非常消耗性能，如果我们能在 shouldComponentUpdate 方法中能够写出更优化的 dom diff 算法，可以极大的提高性能。
 
-### 为什么虚拟 dom 会提高性能?
+### 1.8.5. 为什么虚拟 dom 会提高性能?
 - 虚拟 dom 相当于在 js 和真实 dom 中间加了一个缓存，利用 dom diff 算法避免了没有必要的 dom 操作，从而提高性能。
 
 - 用 JavaScript 对象结构表示 DOM 树的结构；然后用这个树构建一个真正的 DOM 树，插到文档当中当状态变更的时候，重新构造一棵新的对象树。然后用新的树和旧的树进行比较，记录两棵树差异把 2 所记录的差异应用到步骤 1 所构建的真正的 DOM 树上，视图就更新了。
 
-### react diff 原理
+### 1.8.6. react diff 原理
 - 把树形结构按照层级分解，只比较同级元素。
 - 给列表结构的每个单元添加唯一的 key 属性，方便比较。
 - React 只会匹配相同 class 的 component（这里面的 class 指的是组件的名字）
 - 合并操作，调用 component 的 setState 方法的时候, React 将其标记为 dirty.到每一个事件循环结束, React 检查所有标记 dirty 的 component 重新绘制.
 - 选择性子树渲染。开发人员可以重写 shouldComponentUpdate 提高 diff 的性能。
 
-### React 中 refs 的作用是什么？
+### 1.8.7. React 中 refs 的作用是什么？
 
 >Refs 是 React 提供给我们的安全访问 DOM 元素或者某个组件实例的句柄。我们可以为元素添加 ref 属性然后在回调函数中接受该元素在 DOM 树中的句柄，该值会作为回调函数的第一个参数返回
 
-### (组件的)状态(state)和属性(props)之间有何不同
+### 1.8.8. (组件的)状态(state)和属性(props)之间有何不同
 - State 是一种数据结构，用于组件挂载时所需数据的默认值。State 可能会随着时间的推移而发生突变，但多数时候是作为用户事件行为的结果。
 
 - Props(properties 的简写)则是组件的配置。props 由父组件传递给子组件，并且就子组件而言，props 是不可变的(immutable)。组件不能改变自身的 props，但是可以把其子组件的 props 放在一起(统一管理)。Props 也不仅仅是数据--回调函数也可以通过 props 传递。
 
-### 何为受控组件(controlled component)
+### 1.8.9. 何为受控组件(controlled component)
 - 在 HTML 中，类似 \<input>, \<textarea> 和 \<select> 这样的表单元素会维护自身的状态，并基于用户的输入来更新。当用户提交表单时，前面提到的元素的值将随表单一起被发送。但在 React 中会有些不同，包含表单元素的组件将会在 state 中追踪输入的值，并且每次调用回调函数时，如 onChange 会更新 state，重新渲染组件。一个输入表单元素，它的值通过 React 的这种方式来控制，这样的元素就被称为"受控元素"。
 
-### 为什么建议传递给 setState 的参数是一个 callback 而不是一个对象
+### 1.8.10. 为什么建议传递给 setState 的参数是一个 callback 而不是一个对象
 
 - 因为 this.props 和 this.state 的更新可能是异步的，不能依赖它们的值去计算下一个 state。
 
-### 除了在构造函数中绑定 this，还有其它方式吗
+### 1.8.11. 除了在构造函数中绑定 this，还有其它方式吗
 
 - 你可以使用属性初始值设定项(property initializers)来正确绑定回调，create-react-app 也是默认支持的。在回调中你可以使用箭头函数，但问题是每次组件渲染时都会创建一个新的回调。
 
-### 应该在 React 组件的何处发起 Ajax 请求
+### 1.8.12. 应该在 React 组件的何处发起 Ajax 请求
 - 在 React 组件中，应该在 componentDidMount 中发起网络请求。这个方法会在组件第一次“挂载”(被添加到 DOM)时执行，在组件的生命周期中仅会执行一次。更重要的是，你不能保证在组件挂载之前 Ajax 请求已经完成，如果是这样，也就意味着你将尝试在一个未挂载的组件上调用 setState，这将不起作用。在 componentDidMount 中发起网络请求将保证这有一个组件可以更新了。
 
-### 描述事件在 React 中的处理方式
+### 1.8.13. 描述事件在 React 中的处理方式
 
 > 为了解决跨浏览器兼容性问题，您的 React 中的事件处理程序将传递 SyntheticEvent 的实例，它是 React 的浏览器本机事件的跨浏览器包装器。
 
 - 这些 SyntheticEvent 与您习惯的原生事件具有相同的接口，除了它们在所有浏览器中都兼容。有趣的是，React 实际上并没有将事件附加到子节点本身。React 将使用单个事件监听器监听顶层的所有事件。这对于性能是有好处的，这也意味着在更新 DOM 时，React 不需要担心跟踪事件监听器。
 
-### createElement 和 cloneElement 有什么区别？
+### 1.8.14. createElement 和 cloneElement 有什么区别？
 
 > React.createElement():JSX 语法就是用 React.createElement()来构建 React 元素的。它接受三个参数，第一个参数可以是一个标签名。如 div、span，或者 React 组件。第二个参数为传入的属性。第三个以及之后的参数，皆作为组件的子组件。
 
@@ -2033,16 +2033,16 @@ React.cloneElement(
 )
 ```
 
-### React 中有三种构建组件的方式
+### 1.8.15. React 中有三种构建组件的方式
 1. React.createClass()
 2. ES6 class
 3. 无状态函数
 
-### React 项目用过什么脚手架
+### 1.8.16. React 项目用过什么脚手架
 
 - creat-react-app Yeoman 等
 
-### 怎么用 React.createElement 重写下面的代码
+### 1.8.17. 怎么用 React.createElement 重写下面的代码
 - Question：
 ```js
 const element = (
@@ -2060,7 +2060,7 @@ const element = React.createElement(
 );
 ```
 
-### 如何告诉 React 它应该编译生产环境版本？
+### 1.8.18. 如何告诉 React 它应该编译生产环境版本？
 
 - 通常情况下我们会使用 Webpack 的 DefinePlugin 方法来将 NODE_ENV 变量值设置为 production。编译版本中 React 会忽略 propType 验证以及其他的告警信息，同时还会降低代码库的大小，React 使用了 Uglify 插件来移除生产环境下不必要的注释等信息。
 
